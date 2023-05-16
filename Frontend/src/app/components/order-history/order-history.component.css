@@ -1,0 +1,11 @@
+h3{
+    margin-top: 20%;
+    margin-left: 18%;
+}
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 908px;
+    margin-left: 17%;
+}

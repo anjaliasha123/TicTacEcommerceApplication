@@ -1,0 +1,12 @@
+<form class="form-header bg-dark" onsubmit="return false;" method="GET">
+    <input 
+    [(ngModel)]="inputSearchData" 
+    class="au-input au-input-xl" 
+    type="text" name="search" 
+    placeholder="Search for data ..." 
+    (keyup.enter)="doSearch()"
+    />
+    <button class="au-btn-submit" (click)="doSearch()">
+        Search
+    </button>
+</form>

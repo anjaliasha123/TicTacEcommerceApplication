@@ -1,0 +1,10 @@
+.menu-link{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    color: antiquewhite !important;
+}
+a.menu-link:hover{
+    color: crimson !important;
+    font-size: large;
+    text-decoration: underline;
+}

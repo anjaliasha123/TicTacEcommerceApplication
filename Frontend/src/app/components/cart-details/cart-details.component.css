@@ -1,0 +1,18 @@
+.cart-detail-section {
+    margin-top: 150px;
+    margin-left: 300px;
+    display: flex;
+    align-items: center;
+}
+table{
+    margin-top: 5%;
+}
+p.primary{
+    color: rgb(19, 197, 19);
+}
+.increment, .decrement {
+    margin: 0 10px;
+}
+th.col,td {
+    text-align: center;
+}

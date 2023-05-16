@@ -1,0 +1,11 @@
+.dialog{
+    height: 200px;
+    width: 400px;
+    background-color: aliceblue;
+    text-align: center;
+    padding: 8%;
+}
+p{
+    color: orangered;
+    font-weight: 900;
+}

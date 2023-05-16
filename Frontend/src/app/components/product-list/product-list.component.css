@@ -1,0 +1,10 @@
+.row>*{
+    width: 30% !important;
+}
+.not-found{
+    color: red;
+    font-style: italic;
+}
+.main-content{
+    margin-left: 20%;
+}
