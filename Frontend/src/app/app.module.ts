@@ -1,6 +1,6 @@
 import { Injector, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import {MatDialogModule} from '@angular/material/dialog';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
@@ -27,6 +27,7 @@ import { OktaAuth } from '@okta/okta-auth-js';
 import myAppConfig from './config/my-app-config';
 import { ProductsService } from './services/products.service';
 import { OrderHistoryComponent } from './components/order-history/order-history.component';
+import { AuthInterceptorService } from './services/auth-interceptor.service';
 
 const oktaConfig = myAppConfig.oidc;
 const oktaAuth = new OktaAuth(oktaConfig);
@@ -72,7 +73,8 @@ data: {onAuthRequired: sendToLoginPage}},
     NgbModule
   ],
   providers: [ProductsService, 
-    {provide: OKTA_CONFIG, useValue: {oktaAuth}}
+    {provide: OKTA_CONFIG, useValue: {oktaAuth}},
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true}
     ],
   bootstrap: [AppComponent]
 })
